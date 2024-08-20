@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head %>
+<body>
+    <% include ../partials/header %>
+    <div class="container">
+        <h2>Search Posts</h2>
+        <form action="/search/title" method="POST">
+            <div class="form-group">
+                <label for="title">Search by Title:</label>
+                <input type="text" name="title" class="form-control" id="title">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <br>
+        <form action="/search/category" method="POST">
+            <div class="form-group">
+                <label for="category">Search by Category:</label>
+                <input type="text" name="category" class="form-control" id="category">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div class="container mt-4">
+            <% include ../partials/posts %>
+        </div>
+    </div>
+    <% include ../partials/footer %>
+</body>
+</html>
